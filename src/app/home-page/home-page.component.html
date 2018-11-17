@@ -1,0 +1,11 @@
+<div class="films">
+  <div class="films-top">
+    <input type="text" (keyup)="search(s.value)" #s>
+  </div>
+  <div class="films-body">
+    <a *ngFor="let f of filmsService.films" routerLink="/film/{{f.imdbID}}" class="film">
+      <img src="{{f.Poster}}" alt="{{f.Title}}" class="poster">
+      <h4 class="title">{{f.Title}}</h4>
+    </a>
+  </div>
+</div>
